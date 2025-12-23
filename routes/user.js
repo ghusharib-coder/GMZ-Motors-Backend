@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-import User from '../models/UserSchema';
+import User from '../models/UserSchema.js';
 router.post('/signup',async (req, res) => {
   try {
     const { name, password} = req.body;
@@ -28,4 +28,4 @@ router.post('/login',async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 })
-module.exports=router;
+export default router;

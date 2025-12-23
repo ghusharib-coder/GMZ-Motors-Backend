@@ -1,6 +1,5 @@
 // backend/models/Complaint.js
-const mongoose = require('mongoose');
-
+import mongoose from "mongoose";
 const complaintSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -8,5 +7,5 @@ const complaintSchema = new mongoose.Schema({
   complaint: String,
   date: { type: Date, default: Date.now }
 });
-
-module.exports = mongoose.model('Complaint', complaintSchema);
+export const Complaint = mongoose.model("Complaint", complaintSchema);
+export default Complaint;

@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const Complaint = require('../models/Complaint');
+import Complaint from '../models/Complaint.js';
 
 // Submit complaint
 router.post('/', async (req, res) => {
@@ -23,4 +23,4 @@ router.get('/:email', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

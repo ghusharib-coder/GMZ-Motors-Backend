@@ -1,7 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const Booking = require('../models/Booking');
-
+import Booking from '../models/Booking.js';
 // ✅ POST /api/bookings
 router.post('/', async (req, res) => {
   try {
@@ -34,5 +33,4 @@ router.get('/:email', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch user bookings' });
   }
 });
-
-module.exports = router;
+export default router;

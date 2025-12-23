@@ -1,9 +1,10 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const bookingRoutes = require('./routes/bookingRoutes');
-const complaintRoutes = require('./routes/complaints');
-const UserRoutes=require('./routes/user');
+import express from 'express';
+import dotenv from 'dotenv/config';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import bookingRoutes from './routes/bookingRoutes.js';
+import complaintRoutes from './routes/complaints.js';
+import UserRoutes from './routes/user.js';
 
 const app = express();
 
